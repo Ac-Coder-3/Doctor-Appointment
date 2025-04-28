@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Doctor Dashboard</title>
+    <script type="module" src="/auth/authProtect.js"></script>
+    <script type="module">
+      import protectRoute from "/auth/authProtect.js";
+
+      protectRoute("doctor");
+    </script>
+    <link rel="stylesheet" href="/css/dr.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <a href="#" data-target="dashboard"
+              ><span id="dashboard-icon"
+                ><img
+                  src="/assets/dashboardIcons/dashboard.png"
+                  alt=""
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                  " /></span
+              >Dashboard</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="appointments">
+              <span id="appointments-icon"
+                ><img
+                  src="/assets/dashboardIcons/appointment.png"
+                  alt=""
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                  " /></span
+              >appointments</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="profile">
+              <span id="profile-icon"
+                ><img
+                  src="/assets/dashboardIcons/profile.png"
+                  alt=""
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                  " /></span
+              >profile</a
+            >
+          </li>
+        </ul>
+        <div class="dr-info">
+          <div class="img-circle">
+            <img id="drImage" src="/assets/images/dr.omar-.png" alt="" />
+          </div>
+          <h4 id="drName">dr.name</h4>
+          <span id="drSpecialty">speciality</span>
+          <a href="#" class="nav-link" id="logout">Logout</a>
+        </div>
+      </aside>
+      <div class="main-content">
+        <header>
+          <nav id="sidebarDashboard">
+            <ul>
+              <li>
+                <a href="#" data-target="dashboard"
+                  ><span id="dashboard-icon"
+                    ><img
+                      src="/assets/dashboardIcons/dashboard.png"
+                      alt=""
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                        display: flex;
+                        align-items: center;
+                      " /></span
+                  >Dashboard</a
+                >
+              </li>
+              <li>
+                <a href="#" data-target="appointments">
+                  <span id="appointments-icon"
+                    ><img
+                      src="/assets/dashboardIcons/appointment.png"
+                      alt=""
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                        display: flex;
+                        align-items: center;
+                      " /></span
+                  >appointments</a
+                >
+              </li>
+              <li>
+                <a href="#" data-target="profile">
+                  <span id="profile-icon"
+                    ><img
+                      src="/assets/dashboardIcons/profile.png"
+                      alt=""
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                        display: flex;
+                        align-items: center;
+                      " /></span
+                  >profile</a
+                >
+              </li>
+            </ul>
+            <!-- <div class="settings">
+              <div class="img-circle">
+                <img src="/assets/images/dr.omar-.png" alt="" />
+              </div>
+              <a href="#" class="nav-link" id="logout">Logout</a>
+            </div> -->
+            <div class="menuIcon">
+              <!-- close -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+              </svg>
+            </div>
+          </nav>
+          <div class="menuIcon">
+            <!-- bar -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <a href="#" class="nav-link" id="logout">Logout</a>
+            <div class="img-circle">
+              <img
+                src="/assets/images/dr.omar-.png"
+                alt=""
+                style="
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                "
+                id="drImage" />
+            </div>
+          </div>
+          <!-- <h1>Welcome Back <span id="great"> </span></h1> -->
+        </header>
+        <main class="content-area" id="content">
+          <div id="dashboard" class="section active">
+            <section class="overview">
+              <div class="card-container">
+                <div class="card">
+                  <img
+                    src="/assets/dashboardIcons/today-patient.png"
+                    alt=""
+                    class="card-icon" />
+                  <div class="card-details">
+                    <h5>Total Patients</h5>
+                    <h3 id="totalPatients">400+</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="/assets/dashboardIcons/profit.png"
+                    alt=""
+                    class="card-icon" />
+                  <div class="card-details">
+                    <h5>Earnings</h5>
+                    <h3 id="doctorEarnings">400+</h3>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="/assets/dashboardIcons//calendar.png"
+                    alt=""
+                    class="card-icon" />
+                  <div class="card-details">
+                    <h5>Total Appointments</h5>
+                    <h3 id="totalAppointments">400+</h3>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="booking-overview">
+            </section>
+
+
+          </div>
+          <div id="appointments" class="section">
+            <div class="latest-booking">
+              <h2 class="section-title">🗓️ All Appointments</h2>
+
+              <!-- Filter Dropdown -->
+              <div style="margin-bottom: 1rem">
+                <label for="appointmentFilter"
+                  ><strong>Filter by Status:</strong></label
+                >
+                <select id="appointmentFilter">
+                  <option value="all">All</option>
+                  <option value="pending">Pending</option>
+                  <option value="completed">Completed</option>
+                  <option value="cancelled">Cancelled</option>
+                </select>
+              </div>
+
+              <div class="table-container">
+                <table class="booking-table">
+                  <thead>
+                    <tr>
+                      <th>Patient</th>
+                      <th>Payment</th>
+                      <th>Booking Info</th>
+                      <th>Price</th>
+                      <th>Status</th>
+                      <th class="action-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="appointmentTableBody">
+                    <!-- JS will populate appointment rows here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <section id="profile" class="section">
+            <div class="profile-section">
+              <div class="profile-container">
+                <div class="profile-header">
+                  <div class="profile-image" id="img">
+                    <img
+                      src="/assets/images/dr.yasmiin.png"
+                      alt="Profile Picture"
+                      id="display-img" />
+                  </div>
+                  <div class="profile-info">
+                    <h2 class="profile-name" id="name">
+                      Dr. Ahmed Ahmed Mohamed
+                    </h2>
+                    <p class="profile-role" id="role">Doctor</p>
+                  </div>
+                </div>
+
+                <div class="profile-details">
+                  <div class="detail-item">
+                    <label>About:</label>
+                    <p id="about">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Eveniet, quos!
+                    </p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Experience:</label>
+                    <p id="experience">5 years of experience</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Appointment fee:</label>
+                    <p id="fee">$50</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Address:</label>
+                    <p id="address">Uganda, Kamwokya</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Email:</label>
+                    <p id="email">drAhmed@gmail.com</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Gender:</label>
+                    <p id="gender">Male</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Age:</label>
+                    <p id="age">30</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Specialty:</label>
+                    <p id="specialty">Cardiologist</p>
+                  </div>
+                </div>
+
+                <div class="profile-actions">
+                  <button class="btn-edit" id="edit-btn">Edit Profile</button>
+                </div>
+              </div>
+
+              <!-- ✅ Fixed edit form -->
+              <form id="edit-form" class="profile-form hidden">
+                <div class="form-group">
+                  <img
+                    id="edit-img"
+                    src="/assets/images/dr.sayir-.png"
+                    alt="Preview" />
+                  <input type="file" id="edit-upload-img" accept="image/*" />
+                </div>
+
+                <div class="form-group">
+                  <label for="edit-name">Full Name</label>
+                  <input type="text" id="edit-name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="edit-password">Password</label>
+                  <input type="password" id="edit-password" />
+                </div>
+
+                <div class="form-group">
+                  <label>Gender</label>
+                  <label
+                    ><input type="radio" name="gender" value="male" />
+                    Male</label
+                  >
+                  <label
+                    ><input type="radio" name="gender" value="female" />
+                    Female</label
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="edit-age">Age</label>
+                  <input type="number" id="edit-age" min="1" max="120" />
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-specialty">Specialty</label>
+                  <input type="text" id="edit-specialty" />
+                </div>
+
+                <div class="form-group">
+                  <label for="edit-about">About</label>
+                  <textarea
+                    name="about"
+                    id="edit-about"
+                    cols="0"
+                    rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-address">Address</label>
+                  <input type="text" id="edit-address" />
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-experience">Experience (years)</label>
+                  <input type="number" id="edit-experience" min="0" />
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-fee">Appointment Fee ($)</label>
+                  <input type="number" id="edit-fee" min="0" />
+                </div>
+
+                <button type="submit" class="btn-save">Save Changes</button>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const overviewContainer = document.querySelector(".booking-overview");
+
+  const loggedInDoctor = JSON.parse(localStorage.getItem("loggedInUser"));
+  if (!loggedInDoctor || loggedInDoctor.role !== "doctor") {
+    alert("Unauthorized access!");
+    window.location.href = "/auth/login.html";
+    return;
+  }
+
+  const appointments = JSON.parse(localStorage.getItem("appointments")) || [];
+
+  const doctorAppointments = appointments.filter(
+    (appt) => appt.doctorId === loggedInDoctor.id
+  );
+
+  if (doctorAppointments.length === 0) {
+    overviewContainer.innerHTML = `<p class="no-appt">No recent bookings found.</p>`;
+    return;
+  }
+
+  let overviewHTML = `<h2 class="overview-title">🗓️ Booking Overview</h2>`;
+
+  doctorAppointments.forEach((appt) => {
+    const patientImage =
+      appt.patientImage && appt.patientImage.startsWith("data:image")
+        ? appt.patientImage
+        : "/assets/dashboardIcons/profile.png";
+
+    overviewHTML += `
+      <div class="overview-card">
+        <div class="patient-info">
+          <img src="${patientImage}" alt="Patient Image" class="patient-img" />
+          <div class="patient-detailss">
+            <span>Patient</span>
+            <h3 class="patient-Name">${appt.patientName}</h3>
+          </div>
+        </div>
+        <div class="status-box">
+          <span>Time Slot</span>
+          <h3 class="slot">${appt.slot}</h3>
+        </div>
+      </div>
+    `;
+  });
+
+  overviewContainer.innerHTML = overviewHTML;
+});
+
+</script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="/js/drDashboad.js"></script>
+  </body>
+</html>

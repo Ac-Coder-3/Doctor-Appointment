@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find A Doctor</title>
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+      <script type="module" src="/js/home.js" defer></script>
+    <script type="module" src="/js/findDoctors.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav id="desktopNav">
+          <div class="logo">
+            <a href="../index.html"><span>Care</span>Point</a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/index.html" class="active nav-link">home</a></li>
+            <li>
+              <a href="/pages/services.html" class="nav-link">services</a>
+            </li>
+            <li>
+              <a href="/pages/findDoctor.html" class="nav-link"
+                >find a doctor</a
+              >
+            </li>
+            <li><a href="/pages/contact.html" class="nav-link">contact</a></li>
+          </ul>
+          <div class="ac">
+            <div class="nav-auth-mobile" id="auth-links">
+              <a href="/auth/register.html" class="btn-register">Register</a>
+              <a href="/auth/login.html" class="btn-login">Login</a>
+            </div>
+
+            <div class="nav-user" id="user-info" style="display: none">
+              <a href="#" id="user-link">
+                <img id="desktop-profile-img" src="" alt="User Image" />
+              </a>
+              <button id="logout-btn" class="btn-logout">Logout</button>
+            </div>
+            <div class="menuIcon">
+              <!-- bar -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="35"
+                height="35"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16">
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+              </svg>
+              <!-- close -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+              </svg>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <nav id="mobileNav">
+        <ul class="nav-links">
+          <li><a href="/index.html" class="active nav-link">home</a></li>
+          <li><a href="/pages/services.html" class="nav-link">services</a></li>
+          <li>
+            <a href="/pages/findDoctor.html" class="nav-link">find a doctor</a>
+          </li>
+          <li><a href="/pages/contact.html" class="nav-link">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="content">
+      <section class="findDoctor slide-in-bottom">
+        <div class="bg-find-doctor">
+          <div class="section-tag">
+            <h2>#find</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Find a Doctor</h2>
+            <p class="section-subtitle">
+              Explore our team of trusted specialists and easily find the right
+              doctor for your health needs. Search by name or specialization,
+              and book with confidence.
+            </p>
+          </div>
+          <div class="search-box">
+            <input
+              type="text"
+              id="inputSearch"
+              placeholder="Search by name or specialization..."
+              autofocus />
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          </div>
+          <div class="containerFindDoctors"></div>
+        </div>
+      </section>
+
+      <section class="testimonials slide-in-bottom">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <p class="section-subtitle">
+              Real stories. Real healing. Discover how our doctors are making a
+              difference in people's lives.
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-header ">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="rating-number">(4.6)</span>
+              </div>
+              <p class="testimonial-review">
+                I was so nervous booking my first appointment, but this site
+                made everything simple. Found the perfect doctor in minutes!
+              </p>
+              <div class="testimonial-info">
+                <img
+                  src="/assets//images/default-user.webp"
+                  alt="Patient Image"
+                  class="testimonial-img" />
+                <div>
+                  <h4 class="patient-name">Fatima Mohamed A.</h4>
+                  <span class="title">Patient</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-header">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="rating-number">(3.6)</span>
+              </div>
+              <p class="testimonial-review">
+                I was so nervous booking my first appointment, but this site
+                made everything simple. Found the perfect doctor in minutes!
+              </p>
+              <div class="testimonial-info">
+                <img
+                  src="/assets/images/patient-2.jpg"
+                  alt="Patient Image"
+                  class="testimonial-img" />
+                <div>
+                  <h4 class="patient-name">Saynab Salim  M.</h4>
+                  <span class="title">Patient</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-header">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="rating-number">(4.6)</span>
+              </div>
+              <p class="testimonial-review">
+                I was so nervous booking my first appointment, but this site
+                made everything simple. Found the perfect doctor in minutes!
+              </p>
+              <div class="testimonial-info">
+                <img
+                  src="/assets/images/patient.avif"
+                  alt="Patient Image"
+                  class="testimonial-img" />
+                <div>
+                  <h4 class="patient-name">Ahmed Ali  M.</h4>
+                  <span class="title">Patient</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-header ">
+              <div class="testimonial-rating">
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-solid fa-star filled"></i>
+                <i class="fa-regular fa-star"></i>
+                <span class="rating-number">(4.6)</span>
+              </div>
+              <p class="testimonial-review">
+                I was so nervous booking my first appointment, but this site
+                made everything simple. Found the perfect doctor in minutes!
+              </p>
+              <div class="testimonial-info">
+                <img
+                  src="/assets/images/patient-1.jpg"
+                  alt="Patient Image"
+                  class="testimonial-img" />
+                <div>
+                  <h4 class="patient-name">Qasim Asad M.</h4>
+                  <span class="title">Patient</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer slide-in-bottom">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <a href="/"><span>Care</span>Point</a>
+            <p>Connecting you to trusted doctors and care you can count on.</p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/pages/services.html">Services</a></li>
+              <li><a href="/pages/findDoctor.html">Find a Doctor</a></li>
+              <li><a href="/pages/contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-services">
+            <h4>Departments</h4>
+            <ul>
+              <li><a href="#">Cardiology</a></li>
+              <li><a href="#">Pediatrics</a></li>
+              <li><a href="#">Neurology</a></li>
+              <li><a href="#">Dermatology</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact">
+            <h4>Contact</h4>
+            <p><i class="fa-solid fa-phone"></i> +252 61 234 5678</p>
+            <p><i class="fa-solid fa-envelope"></i> info@carepoint.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Mogadishu, Somalia</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 <span>Care</span>Point. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>

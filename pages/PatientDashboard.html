@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patient Dashboard</title>
+    <script type="module" src="/auth/authProtect.js"></script>
+    <script type="module">
+      import protectRoute from "/auth/authProtect.js";
+      protectRoute("patient");
+    </script>
+    <link rel="stylesheet" href="/css/patient.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <a href="#" data-target="myBooking">
+              <span id="appointments-icon"
+                ><img
+                  src="/assets/dashboardIcons/appointment.png"
+                  alt=""
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                  " /></span
+              >my booking</a
+            >
+          </li>
+          <li>
+            <a href="./findDoctor.html">
+              <span id="profile-icon"
+                ><img
+                  src="/assets/dashboardIcons/appointment.png"
+                  alt=""
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                  " /></span
+              >Book Now</a
+            >
+          </li>
+          <li>
+            <a href="#" data-target="profile">
+              <span id="profile-icon"
+                ><img
+                  src="/assets/dashboardIcons/profile.png"
+                  alt=""
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    object-fit: cover;
+                    display: flex;
+                    align-items: center;
+                  " /></span
+              >my profile</a
+            >
+          </li>
+        </ul>
+
+        <div class="dr-info">
+          <div class="img-circle">
+            <img
+              src="/assets/images/dr.omar-.png"
+              alt="patient"
+              id="desktop-profile-img" />
+          </div>
+          <h4 class="patient-name" id="name">dr.name</h4>
+          <span id="userRole">ac</span>
+          <a href="#" class="nav-link" id="logout">Logout</a>
+        </div>
+      </aside>
+      <div class="main-content">
+        <header>
+          <nav id="sidebarDashboard">
+            <ul>
+              <li>
+                <a href="#" data-target="profile">
+                  <span id="profile-icon"
+                    ><img
+                      src="/assets/dashboardIcons/profile.png"
+                      alt=""
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                        display: flex;
+                        align-items: center;
+                      " /></span
+                  >my profile</a
+                >
+              </li>
+              <li>
+                <a href="#" data-target="myBooking">
+                  <span id="appointments-icon"
+                    ><img
+                      src="/assets/dashboardIcons/appointment.png"
+                      alt=""
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                        display: flex;
+                        align-items: center;
+                      " /></span
+                  >my booking</a
+                >
+              </li>
+              <li>
+                <a href="./findDoctor.html">
+                  <span id="profile-icon"
+                    ><img
+                      src="/assets/dashboardIcons/appointment.png"
+                      alt=""
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                        display: flex;
+                        align-items: center;
+                      " /></span
+                  >Book Now</a
+                >
+              </li>
+            </ul>
+
+            <div class="menuIcon">
+              <!-- close -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+              </svg>
+            </div>
+          </nav>
+          <div class="menuIcon">
+            <!-- bar -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+            <a href="#" class="nav-link" id="logout">Logout</a>
+            <div class="img-circle">
+              <img
+                src="/assets/images/dr.omar-.png"
+                alt=""
+                style="
+                  width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                " id="mobile-profile-img"/>
+            </div>
+          </div>
+        </header>
+        <main class="content-area patientDashboard" id="content">
+          <section id="profile" class="section">
+            <div class="profile-section">
+              <div class="profile-container">
+                <div class="profile-header">
+                  <div class="profile-image" id="profile-display">
+                    <img
+                      src="/assets/default-user.png"
+                      alt="Profile Picture"
+                      id="display-img" />
+                  </div>
+                  <div class="profile-info">
+                    <h2 class="profile-name" id="display-name">John Doe</h2>
+                    <p class="profile-role" id="display-role">Patient</p>
+                  </div>
+                </div>
+
+                <div class="profile-details">
+                  <div class="detail-item">
+                    <label>Email:</label>
+                    <p id="display-email">johndoe@example.com</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Gender:</label>
+                    <p id="display-gender">Male</p>
+                  </div>
+
+                  <div class="detail-item">
+                    <label>Age:</label>
+                    <p id="display-age">30</p>
+                  </div>
+                </div>
+
+                <div class="profile-actions">
+                  <button class="btn-edit" id="edit-btn">Edit Profile</button>
+                </div>
+              </div>
+
+              <form id="profile-form" class="profile-form hidden">
+                <div class="form-group">
+                  <img
+                    id="preview-img"
+                    src="/assets/default-user.png"
+                    alt="Preview" />
+                  <input type="file" id="upload-img" accept="image/*" />
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-name">Full Name</label>
+                  <input type="text" id="profile-name" />
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-password">Password</label>
+                  <input type="password" id="profile-password" />
+                </div>
+
+                <div class="form-group">
+                  <label>Gender</label>
+                  <label
+                    ><input type="radio" name="gender" value="male" />
+                    Male</label
+                  >
+                  <label
+                    ><input type="radio" name="gender" value="female" />
+                    Female</label
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="profile-age">Age</label>
+                  <input type="number" id="profile-age" min="1" max="120" />
+                </div>
+
+                <button type="submit" class="btn-save">Save Changes</button>
+              </form>
+            </div>
+          </section>
+
+          <section id="myBooking" class="section active">
+            <section class="top-doctors-section">
+              <div class="container">
+                <div id="doctorCards" class="doctorCards"></div>
+              </div>
+            </section>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <!-- <script>
+      function loadSidebarProfile() {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        console.log(users);
+        if (!loggedInUser || loggedInUser.role !== "patient") return;
+
+        const patient = users.find((u) => u.email === loggedInUser.email);
+        if (!patient) return;
+
+        const profileImg = document.getElementById("profile-img");
+        const profileName = document.getElementById("name");
+        const userRole = document.getElementById("userRole");
+
+        const defaultImg = "/assets/images/default-user.webp";
+
+        profileImg.src = patient.image || defaultImg;
+        profileName.textContent = patient.name || "Unknown";
+        userRole.textContent = patient.role || "Unknown";
+      }
+
+      // ✅ Call it on page load
+      loadSidebarProfile();
+    </script> -->
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script type="module" src="/js/patientDashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/build/sha256.min.js"></script>
+    <script type="module" src="../auth/currerUserData.js"></script>
+    <script type="module" src="../auth/logOut.js"></script>
+  </body>
+</html>

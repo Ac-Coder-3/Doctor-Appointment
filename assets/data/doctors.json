@@ -1,0 +1,267 @@
+[
+    {
+        "id": 0,
+        "name": "Dr. Amina Yusuf",
+        "specialty": "Pediatrics",
+        "image": "/assets/images/dr.amina-.png",
+        "location": "Mogadishu",
+        "rating": 4.8,
+        "experience": "8 years",
+        "bio": "Expert in child healthcare, bringing a compassionate approach to each young patient.",
+        "isAvailable": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "Harvard Medical School, USA",
+                "year": "2013"
+            },
+            {
+                "degree": "Pediatrics Fellowship",
+                "institution": "Children's Hospital of Boston, USA",
+                "year": "2016"
+            }
+        ],
+        "timeSlots": [
+            {
+                "day": "Monday",
+                "start": "08:00",
+                "end": "11:00"
+            },
+            {
+                "day": "Wednesday",
+                "start": "14:00",
+                "end": "17:00"
+            },
+            {
+                "day": "Friday",
+                "start": "09:00",
+                "end": "12:00"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Dr. Omar Farah",
+        "specialty": "Cardiology",
+        "image": "/assets/images/dr.omar-.png",
+        "location": "Hargeisa",
+        "rating": 4.9,
+        "experience": "9 years",
+        "bio": "Heart specialist, dedicated to providing personalized care and improving patients' quality of life.",
+        "isAvailable": true,
+        "adminOverride": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "Stanford University School of Medicine, USA",
+                "year": "2010"
+            },
+            {
+                "degree": "Cardiology Fellowship",
+                "institution": "Cleveland Clinic, USA",
+                "year": "2015"
+            }
+        ],
+        "timeSlots": [
+            {
+                "day": "Monday",
+                "start": "09:00",
+                "end": "12:00"
+            },
+            {
+                "day": "Tuesday",
+                "start": "14:00",
+                "end": "17:00"
+            },
+            {
+                "day": "Wednesday",
+                "start": "09:00",
+                "end": "12:00"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Dr. Ismail Jibril",
+        "specialty": "Orthopedic",
+        "image": "/assets/images/dr.ismail.png",
+        "location": "Mogadishu",
+        "rating": 4.5,
+        "experience": "6 years",
+        "bio": "Treating musculoskeletal issues, with a focus on injury recovery and long-term physical health.",
+        "isAvailable": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "University of Toronto, Canada",
+                "year": "2014"
+            },
+            {
+                "degree": "Orthopedic Fellowship",
+                "institution": "Toronto Orthopedic Institute, Canada",
+                "year": "2018"
+            }
+        ],
+        "timeSlots": [
+            {
+                "day": "Monday",
+                "start": "10:00",
+                "end": "13:00"
+            },
+            {
+                "day": "Wednesday",
+                "start": "14:00",
+                "end": "17:00"
+            },
+            {
+                "day": "Friday",
+                "start": "08:00",
+                "end": "12:00"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Dr. Yasmin Dahir",
+        "specialty": "Gynecology",
+        "image": "/assets/images/dr.yasmiin.png",
+        "location": "Hargeisa",
+        "rating": 4.6,
+        "experience": "8 years",
+        "bio": "Specializing in women's health, from reproductive care to menopause management.",
+        "isAvailable": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "Imperial College London, UK",
+                "year": "2013"
+            },
+            {
+                "degree": "Gynecology Fellowship",
+                "institution": "Women's Health Centre, London, UK",
+                "year": "2016"
+            }
+        ],
+        "timeSlots": [
+            {
+                "day": "Tuesday",
+                "start": "08:00",
+                "end": "11:00"
+            },
+            {
+                "day": "Thursday",
+                "start": "14:00",
+                "end": "17:00"
+            },
+            {
+                "day": "Saturday",
+                "start": "09:00",
+                "end": "12:00"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dr. Khalid Ali",
+        "specialty": "Neurology",
+        "image": "/assets/images/dr.khalid.png",
+        "location": "Mogadishu",
+        "rating": 4.8,
+        "experience": "10 years",
+        "bio": "Focused on brain health and neurological disorders, bringing deep expertise to complex cases.",
+        "isAvailable": true,
+        "adminOverride": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "Oxford University, UK",
+                "year": "2009"
+            },
+            {
+                "degree": "Neurology Fellowship",
+                "institution": "Oxford Brain Institute, UK",
+                "year": "2013"
+            }
+        ],
+        "timeSlots": [
+            {
+                "day": "Monday",
+                "start": "08:00",
+                "end": "11:00"
+            },
+            {
+                "day": "Wednesday",
+                "start": "14:00",
+                "end": "17:00"
+            },
+            {
+                "day": "Friday",
+                "start": "09:00",
+                "end": "12:00"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Dr. Layla Noor",
+        "specialty": "Ophthalmology",
+        "image": "/assets/images/dr.layla.png",
+        "location": "Hargeisa",
+        "rating": 4.8,
+        "experience": "8 years",
+        "bio": "Specializing in eye health and vision correction, with a focus on innovative treatments.",
+        "isAvailable": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "Johns Hopkins University School of Medicine, USA",
+                "year": "2014"
+            },
+            {
+                "degree": "Ophthalmology Fellowship",
+                "institution": "Wilmer Eye Institute, USA",
+                "year": "2017"
+            }
+        ],
+        "timeSlots": [
+            {
+                "day": "Monday",
+                "start": "09:00",
+                "end": "12:00"
+            },
+            {
+                "day": "Wednesday",
+                "start": "14:00",
+                "end": "17:00"
+            },
+            {
+                "day": "Friday",
+                "start": "08:00",
+                "end": "11:00"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Dr. Ahmed Abdullahi",
+        "specialty": "General Medicine",
+        "image": "/assets/images/dr.ahmed-.png",
+        "location": "Mogadishu",
+        "rating": 4.6,
+        "experience": "7 years",
+        "bio": "Offering comprehensive care for a wide range of health issues, from general health checkups to chronic condition management.",
+        "isAvailable": true,
+        "education": [
+            {
+                "degree": "MD",
+                "institution": "Yale University School of Medicine, USA",
+                "year": "2013"
+            },
+            {
+                "degree": "General Medicine Fellowship",
+                "institution": "Mayo Clinic, USA",
+                "year": "2017"
+            }
+        ]
+    }
+]

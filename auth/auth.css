@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+:root {
+  --color-primary: #3d7aed;
+  --color-light-bg: #f1f6ff;
+  --color-dark: #1f1f1f;
+  --color-accent: #ff8811;
+  --color-muted: #9ca3af;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to left, #ff881115, #f1f6ff7a, #dbe6f9);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 12px;
+  border: 1px solid var(--color-muted);
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-group select {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+}
+
+.roles {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 6px;
+}
+
+button {
+  background: var(--color-primary);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--color-primary);
+}
+
+p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+p a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+}

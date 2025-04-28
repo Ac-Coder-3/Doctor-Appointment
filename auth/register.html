@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="auth.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Register Page</h1>
+      <form id="registerForm">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username" />
+          <input type="email" id="email" placeholder="Email" />
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" />
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm Password" />
+        </div>
+        <div class="input-group">
+          <select id="role">
+            <option value="" disabled selected>Select your role</option>
+            <option value="patient">Patient</option>
+            <option value="admin">Admin</option>
+          </select>
+          <small class="roles"
+            >Only 'Patient' or 'Admin' roles can register themselves.</small
+          >
+        </div>
+
+        <div class="input-group">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+      <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script type="module" src="register.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  </body>
+</html>

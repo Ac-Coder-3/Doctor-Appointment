@@ -1,0 +1,72 @@
+[
+    {
+        "id": 0,
+        "name": "Ayaan M.",
+        "title": "patient",
+        "review": "No more long queues or confusion. This site made it so easy to connect with the best doctors. Highly recommended!",
+        "rating": 4.6,
+        "location": "Mogadishu",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2025-04-10"
+    },
+    {
+        "id": 1,
+        "name": "Fatima L.",
+        "title": "patient",
+        "review": "         Booking was super smooth and fast. I got a confirmed time slot within seconds. This platform is a lifesaver!",
+        "rating": 4.3,
+        "location": "Bosaso",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2025-02-10"
+    },
+    {
+        "id": 2,
+        "name": "Mohamed R.",
+        "title": "patient",
+        "review": "Honestly, the doctors here really care. It felt more like talking to a friend than a doctor. So grateful!  ",
+        "rating": 4.8,
+        "location": "Hargeisa",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2025-01-10"
+    },
+    {
+        "id": 3,
+        "name": "Nasra A.",
+        "title": "patient",
+        "review": "The doctor I found here helped me more in one session than months elsewhere. Totally impressed!",
+        "rating": 4.2,
+        "location": "Garowe",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2025-03-10"
+    },
+    {
+        "id": 4,
+        "name": "Yasmin D.",
+        "title": "patient",
+        "review": "   Clean interface, kind doctors, and quick access. Everything I needed for peace of mind. Thank you!",
+        "rating": 5.9,
+        "location": "Kismayo",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2024-04-10"
+    },
+    {
+        "id": 5,
+        "name": "Abdiwahab S.",
+        "title": "patient",
+        "review": "I was so nervous booking my first appointment, but this site made everything simple. Found the perfect doctor in minutes!",
+        "rating": 4.6,
+        "location": "Laascaanood",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2023-06-10"
+    },
+    {
+        "id": 6,
+        "name": "Ali Omar",
+        "title": "patient",
+        "review": "The doctors were kind and very helpful!",
+        "rating": 3.1,
+        "location": "Berbera",
+        "image": "/assets/images/dr.amina-.png",
+        "submittedAt": "2024-05-10"
+    }
+]
