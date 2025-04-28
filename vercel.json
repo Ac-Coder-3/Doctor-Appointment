@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "/index.html",
+            "src": "Doctor_Appointment/index.html",
             "use": "@vercel/static"
         }
     ],
