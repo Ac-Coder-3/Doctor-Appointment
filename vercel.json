@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "doctor_appointment/index.html",
+            "src": "/index.html",
             "use": "@vercel/static"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/doctor_appointment/index.html"
+            "dest": "/index.html"
         }
     ]
 }
