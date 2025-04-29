@@ -1135,10 +1135,16 @@ div#user-info {
   header #desktopNav .logo a {
     font-size: 1.3rem;
   }
-  .ourServices .section-tag h2 {
-    margin-top: 16rem;
-    font-size: 3rem;
+    #mobileNav.active {
+        top: 61.9px !important;}
+   .section-tag h2 {
+    margin-top: 16rem !important;
+    font-size: 3rem !important;
   }
+  .contact-bg.slide-in-bottom.in-view {
+    padding-block: 2rem !important;
+    padding-inline: 0rem !important;
+}
   .top-doctors-section,
   .easy-steps-section,
   .testimonials,
