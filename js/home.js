@@ -32,7 +32,7 @@ function setActiveNav() {
 
   links.forEach((link) => {
     const linkPath = link.getAttribute("href");
-    if (currentPath.includes(linkPath)) {
+    if (currentPath === linkPath) {
       link.classList.add("active");
     } else {
       link.classList.remove("active");

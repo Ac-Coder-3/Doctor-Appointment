@@ -1132,6 +1132,13 @@ div#user-info {
 }
 
 @media (max-width: 768px) {
+  header #desktopNav .logo a {
+    font-size: 1.3rem;
+  }
+  .ourServices .section-tag h2 {
+    margin-top: 16rem;
+    font-size: 3rem;
+  }
   .top-doctors-section,
   .easy-steps-section,
   .testimonials,
