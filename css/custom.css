@@ -1177,11 +1177,11 @@ div#user-info {
   header .nav-auth {
     display: none;
   }
-  header .nav-auth-mobile {
+  /* header .nav-auth-mobile {
     display: flex;
     align-items: center;
     gap: 2.25rem;
-  }
+  } */
   header #desktopNav .nav-links {
     display: none;
   }
@@ -1222,8 +1222,8 @@ div#user-info {
   #mobileNav > ul li a.active {
     color: var(--color-primary);
   }
-  header .nav-auth-mobile {
-    display: flex;
+  #desktopNav .nav-auth-mobile {
+    display: none !important;
     gap: 1.9rem;
   }
   header .nav-auth-mobile a {

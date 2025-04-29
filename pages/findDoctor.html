@@ -20,10 +20,10 @@
       <div class="container">
         <nav id="desktopNav">
           <div class="logo">
-            <a href="../index.html"><span>Care</span>Point</a>
+            <a href="/"><span>Care</span>Point</a>
           </div>
           <ul class="nav-links">
-            <li><a href="/index.html" class="active nav-link">home</a></li>
+            <li><a href="/" class="active nav-link">home</a></li>
             <li>
               <a href="/pages/services.html" class="nav-link">services</a>
             </li>
@@ -34,6 +34,10 @@
             </li>
             <li><a href="/pages/contact.html" class="nav-link">contact</a></li>
           </ul>
+          <!-- <div class="nav-auth-mobile" id="auth-links">
+            <a href="/auth/register.html" class="btn-register">Register</a>
+            <a href="/auth/login.html" class="btn-login">Login</a>
+          </div> -->
           <div class="ac">
             <div class="nav-auth-mobile" id="auth-links">
               <a href="/auth/register.html" class="btn-register">Register</a>
@@ -76,13 +80,51 @@
       </div>
       <nav id="mobileNav">
         <ul class="nav-links">
-          <li><a href="/index.html" class="active nav-link">home</a></li>
+          <li><a href="/" class="active nav-link">home</a></li>
           <li><a href="/pages/services.html" class="nav-link">services</a></li>
           <li>
             <a href="/pages/findDoctor.html" class="nav-link">find a doctor</a>
           </li>
           <li><a href="/pages/contact.html" class="nav-link">contact</a></li>
         </ul>
+        <div class="ac">
+          <div class="nav-auth-mobile" id="auth-links">
+            <a href="/auth/register.html" class="btn-register">Register</a>
+            <a href="/auth/login.html" class="btn-login">Login</a>
+          </div>
+
+          <div class="nav-user" id="user-info" style="display: none">
+            <a href="#" id="user-link">
+              <img id="desktop-profile-img" src="" alt="User Image" />
+            </a>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+          </div>
+          <div class="menuIcon">
+            <!-- bar -->
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16">
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg> -->
+            <!-- close -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg>
+          </div>
+        </div>
       </nav>
     </header>
     <main id="content">
