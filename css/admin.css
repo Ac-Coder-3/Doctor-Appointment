@@ -345,9 +345,12 @@ p.no-dr {
   font-weight: 300;
   height: 50vh;
 }
-.noAppt{  font-size: 1.3rem;
+
+.noAppt {
+  font-size: 1.3rem;
   color: var(--color-muted);
-  font-weight: 300;}
+  font-weight: 300;
+}
 header h1 {
   background-color: #3d7aed0d;
   color: rgb(77 76 76);

@@ -6,7 +6,7 @@ const fetchAllDoctors = () => {
 
     if (Doctors.length === 0) {
       document.querySelector(".containerFindDoctors").innerHTML =
-        "<p>No doctors added yet 🥲</p>";
+        "<p class='no-dr'>No Doctor Added Yet </p>";
       return;
     }
 

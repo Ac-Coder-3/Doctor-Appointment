@@ -20,7 +20,7 @@ const FetchTopDoctors = () => {
     });
 
     if (filterDoctors.length === 0) {
-      showError("No top related doctors found 😢");
+      showError("No top related doctors found ");
       return;
     }
 
