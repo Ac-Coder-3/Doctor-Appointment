@@ -53,5 +53,5 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
 
   setTimeout(() => {
     window.location.href = roleRoutes[user.role] || "/index.html";
-  }, 500);
+  }, 1500);
 });

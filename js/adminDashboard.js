@@ -132,11 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalPatients = users.filter((user) => user.role === "patient").length;
 
   registeredDoctorsElement.textContent =
-    totalDoctors > 0 ? `${totalDoctors}+` : "No Doctors Registered Yet";
+    totalDoctors > 0 ? `${totalDoctors}+` : "No Dr Registered Yet";
   appointmentsElement.textContent =
     totalAppointments > 0
       ? `${totalAppointments}+`
-      : "No Appointments Booked Yet";
+      : "No Appt Booked Yet";
   patientsElement.textContent =
     totalPatients > 0 ? `${totalPatients}+` : "No Patients Registered Yet";
 
@@ -474,14 +474,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const addDoctorForm = document.getElementById("addDoctorForm");
   const resetForm = () => addDoctorForm.reset();
-
+  console.log("addDoctorForm", addDoctorForm.value);
   addDoctorForm.onsubmit = (e) => {
     e.preventDefault();
 
     const imageUrl = addDoctorForm.imageUrl.value.trim();
     const imageFile = addDoctorForm.imageFile.files[0];
 
-    let finalImagePath = "/assets/images/default-doctor.jpg";
+    let finalImagePath = "/assets/images/default-user.webp";
 
     if (imageFile) {
       const reader = new FileReader();
@@ -541,6 +541,8 @@ document.addEventListener("DOMContentLoaded", () => {
       !doctor.fees ||
       !doctor.location ||
       !doctor.role ||
+      !doctor.experience ||
+      !doctor.bio ||
       doctor.education.some((e) => !e.degree || !e.institution || !e.year) ||
       doctor.timeSlots.some((s) => !s.day || !s.start || !s.end)
     ) {
@@ -595,7 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = "";
 
     if (!doctors.length) {
-      grid.innerHTML = `<p class="text-gray-500 text-center col-span-full">No doctors found.</p>`;
+      grid.innerHTML = `<p class="no-dr">No Drs added yet</p>`;
       return;
     }
 
@@ -660,7 +662,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (filtered.length === 0) {
       tableBody.innerHTML = `
         <tr>
-          <td class="noAppt" clospan="6">No appointments found</td>
+          <td class="noAppt"  colspan="6">No appointments found</td>
         </tr>
       `;
       return;

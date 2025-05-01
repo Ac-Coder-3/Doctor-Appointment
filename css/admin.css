@@ -288,7 +288,7 @@ form select {
 }
 .overview .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-auto-rows: minmax(200px, auto);
   gap: 1.5rem;
 }
@@ -328,7 +328,6 @@ form select {
 }
 .overview .card-container .card .card-details h3 {
   font-size: 1.3rem;
-  letter-spacing: 5px;
   font-weight: 700;
 
   background: linear-gradient(to left, #10b9811f, #10b9811c, #10b9811f);
@@ -337,8 +336,18 @@ form select {
   width: fit-content;
   color: #3d7aed;
 }
-.overview .card-container .card .card-details {
+p.no-dr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--color-muted);
+  font-weight: 300;
+  height: 50vh;
 }
+.noAppt{  font-size: 1.3rem;
+  color: var(--color-muted);
+  font-weight: 300;}
 header h1 {
   background-color: #3d7aed0d;
   color: rgb(77 76 76);

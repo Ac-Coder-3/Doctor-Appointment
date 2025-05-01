@@ -66,5 +66,5 @@ document.getElementById("registerForm").addEventListener("submit", (event) => {
   showToast("Registration successful", "success");
   setTimeout(() => {
     window.location.href = "/auth/login.html";
-  }, 500);
+  }, 1500);
 });
